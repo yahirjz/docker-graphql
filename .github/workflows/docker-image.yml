@@ -24,11 +24,11 @@ jobs:
       
       - name: Build Docker image
         run: |
-           docker build -t yahirjz/docker-graphql:0.0.2 
+           docker build -t ${{ secrets.DOCKER_USER }}/docker-graphql:0.0.2 .
 
       - name: Push Docker image
         run: |
-           docker push yahirjz/docker-graphql:0.0.2 
+           docker push ${{ secrets.DOCKER_USER }}/docker-graphql:0.0.2 
 
       
         
